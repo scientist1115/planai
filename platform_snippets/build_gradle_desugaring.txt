@@ -1,0 +1,24 @@
+flutter_local_notifications 는 "core library desugaring"이 켜져 있어야 빌드됩니다.
+
+[android/app/build.gradle.kts 인 경우]
+android {
+    compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+    }
+}
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+}
+
+[android/app/build.gradle (Groovy) 인 경우]
+android {
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+    }
+}
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
+}
+
+또 android/app/build.gradle(.kts) 의 applicationId 를 "io.planai.app" 처럼 본인 것으로 정하세요.
+(한 번 스토어에 올리면 바꿀 수 없어요)

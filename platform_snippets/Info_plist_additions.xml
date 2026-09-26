@@ -1,0 +1,21 @@
+<!-- ios/Runner/Info.plist 의 <dict> 안에 추가 -->
+
+<!-- 카카오 로그인 후 앱으로 돌아오는 주소 -->
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>io.planai.app</string>
+    </array>
+  </dict>
+  <!-- 네이버 로그인용 URL 스킴도 여기에 dict 하나 더 추가 (flutter_naver_login README 참고) -->
+</array>
+
+<!-- 사진/카메라 권한 문구: 없으면 심사 거절 + 앱이 꺼집니다 -->
+<key>NSCameraUsageDescription</key>
+<string>시간표나 공부 자료를 찍어서 AI에게 보내기 위해 카메라를 사용해요.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>사진 속 일정이나 공부 자료를 AI에게 보내기 위해 사진 보관함을 사용해요.</string>
+
+<!-- Xcode > Runner > Signing & Capabilities 에서 "Sign in with Apple" 과 "Push Notifications" 추가 -->
