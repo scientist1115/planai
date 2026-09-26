@@ -1,0 +1,10 @@
+{
+  "name": "PlanAI (Flutter + Android SDK 미리 설치됨)",
+  "image": "edwinhuish/flutter-dev:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Dart-Code.dart-code", "Dart-Code.flutter"]
+    }
+  },
+  "postCreateCommand": "yes | flutter doctor --android-licenses || true"
+}
